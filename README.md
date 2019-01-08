@@ -3,7 +3,11 @@
 Transfer Learning **MNIST** with **EMNIST** features
 
 Se entreno una red neuronal convolucional con la arquitectura mostrada [CNN](model.png) con la base de datos de EMNIST, se transfirieron posteriormente las características aprendidas de las capas convolucionales para posteriormente reentrenar las últimas capas (full conected layers) con la base de datos de [MNIST](http://yann.lecun.com/exdb/mnist/).<br />
+
+<p align="center"> 
 <img height=400 src="https://github.com/camilo1704/MNIST_EMNIST_TL/blob/master/model.png" />
+</p>
+
 I used Keras with tensorflow as backend, the EMNIST dataset is a .mat file downloaded from the [official repository of NIST]( https://www.nist.gov/itl/iad/image-group/emnist-dataset).<br />
 Se usó keras con Tensorflow como backend en un ambiente virtual creado con Anaconda para lsa versiones  tensorflow=1.8.0 and keras=2.1.6. (estas versiones arreglan el problema de la compatibilidad de la lista de parámetros de las capas sofmax).<br/> 
 Los datos vienen separadados previamente en un archivo .mat [download](https://www.nist.gov/itl/iad/image-group/emnist-dataset), donde el set de entrenamiento tiene la dirección "file['dataset'][0,0][0][0][0][0]", las categorías están en file['dataset'][0,0][0][0][0][1], y el set de testeo está en "file['dataset'][0,0][1][0][0][0]" con las categorías "file['dataset'][0,0][1][0][0][1]".<br />
